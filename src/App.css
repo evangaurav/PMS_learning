@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #26547C;
+  padding: 20px 15px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
-.App-link {
-  color: #61dafb;
+header .header_logo {
+  padding-right: 15px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header .header_logo h1 {
+  margin: 0;
+  line-height: normal;
+}
+
+header .user_info img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 50%;
+}
+
+.task_grid {
+  width: 100%;
+  overflow-x: scroll;
+  padding: 50px 20px;
+  white-space: nowrap;
+  height: calc(100vh - 100px);
+}
+
+.task_list {
+  width: 350px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+  margin-right: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.task_list .add_more_btn {
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: normal;
+  cursor: pointer;
+}
+
+.task_list .add_more_btn span {
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.task_list .add_more_btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0;
+  outline: 0;
+}
+
+.task_list h2 {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+
+.list_name__form {
+  padding: 5px 15px 20px;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+}
+
+.list_name__form.show_list__menu {
+  opacity: 1;
+  visibility: visible;
+  max-height: 100%;
+}
+
+.list_name__form input {
+  padding: 7px 15px;
+  border: 1px solid #000000;
+  border-radius: 0;
+  max-width: 230px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.list_name__form input:focus {
+  border-radius: 0;
+  outline: 0;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.list_name__form button {
+  padding: 7px 15px;
+  background-color: #26547C;
+  border: 1px solid #26547C;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.list_name__form button:focus {
+  border-radius: 0;
+  outline: 0;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.over {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
